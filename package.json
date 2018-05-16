@@ -1,0 +1,31 @@
+{
+  "name": "apollo-graphql",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/prop-types": "^15.5.2",
+    "apollo-boost": "^0.1.6",
+    "apollo-codegen": "^0.19.1",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "react": "^16.3.2",
+    "react-apollo": "^2.1.4",
+    "react-dom": "^16.3.2",
+    "react-scripts-ts": "2.16.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "gen-types":
+      "apollo-codegen introspect-schema https://w5xlvm3vzz.lp.gql.zone/graphql --output schema.json && apollo-codegen generate src/**/*.ts --schema schema.json --target typescript --output src/operation-result-types.ts"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.1.0",
+    "@types/react": "^16.3.14",
+    "@types/react-dom": "^16.0.5",
+    "typescript": "^2.8.3"
+  }
+}
